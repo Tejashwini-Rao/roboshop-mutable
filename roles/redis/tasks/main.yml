@@ -1,12 +1,12 @@
-- name: Install Redis Server
-  ansible.builtin.yum:
-    name: redis-6.2.7
-    state: installed
-
 - name: Copy Redis repo file
   ansible.builtin.copy:
     src: redis.repo
     dest: /etc/yum.repos.d/redis.repo
+
+- name: Install Redis Server
+  ansible.builtin.yum:
+    name: redis-6.2.7
+    state: installed
 
 - name: Update Redis Listen Address
   ansible.builtin.replace:
