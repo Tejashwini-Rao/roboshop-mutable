@@ -1,5 +1,31 @@
 - name: Setup NodeJS repos
   ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash
+- name: Install all required libs (32 bits version)
+  yum: name={{ item }} state=present
+  with_items:
+    - ncurses-libs.i686
+    - compat-libtermcap.i686
+    - libstdc++.i686
+    - libXrender.i686
+    - libXtst.i686
+    - libuuid.i686
+    - libSM.i686
+    - libXext.i686
+    - libXi.i686
+    - libXft.i686
+    - libXt.i686
+    - libXp.i686
+    - freetype.i686
+    - expat.i686
+    - fontconfig.i686
+    - libX11.i686
+    - libxcb.i686
+    - libXau.i686
+    - compat-db42.i686
+    - compat-db43.i686
+    - libICE.i686
+    - compat-libstdc++-33.i686
+    - compat-db.i686
 
 - name: Install NodeJS
   ansible.builtin.yum:
