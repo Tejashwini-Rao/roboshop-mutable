@@ -1,5 +1,16 @@
-inventory      = ./inv-roboshop
-#library        = /usr/share/my_modules/
+# config file for ansible -- https://ansible.com/
+# ===============================================
+
+  # nearly all parameters can be overridden in ansible-playbook
+  # or with command line flags. ansible will read ANSIBLE_CONFIG,
+  # ansible.cfg in the current working directory, .ansible.cfg in
+  # the home directory or /etc/ansible/ansible.cfg, whichever it
+  # finds first
+
+  [defaults]
+
+  inventory      = ./inv-roboshop
+  #library        = /usr/share/my_modules/
   #module_utils   = /usr/share/my_module_utils/
   #remote_tmp     = ~/.ansible/tmp
   #local_tmp      = ~/.ansible/tmp
