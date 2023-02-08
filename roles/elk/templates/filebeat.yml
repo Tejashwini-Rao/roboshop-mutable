@@ -4,7 +4,7 @@ filebeat.inputs:
     paths:
       - /var/log/nginx/access.log
     fields:
-      component: frontend
+      component: {{COMPONENT}}
       log_type: raw
 
 output.logstash:
