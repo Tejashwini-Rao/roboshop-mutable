@@ -13,11 +13,11 @@
   become: yes
   roles:
     - catalogue
-- name: Setup RoboShop
-  hosts: REDIS
-  become: yes
-  roles:
-    - redis
+#- name: Setup RoboShop
+#  hosts: REDIS
+#  become: yes
+#  roles:
+#    - redis
 - name: Setup RoboShop
   hosts: USER
   become: yes
